@@ -5,16 +5,72 @@
  */
 package vn.fpt.edu.view;
 
+import java.awt.BorderLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Admin
  */
 public class FormNhapHang extends javax.swing.JFrame {
 
+    JPanel pnlMain = new JPanel();
+    JPanel pnlTop = new JPanel();
+    JPanel pnlBottom = new JPanel();
+    //
+    JButton btnThem = new JButton("Thêm");
+    JButton btnSua = new JButton("Sửa");
+    JButton btnXoa = new JButton("Xóa");
+    JButton btnTim = new JButton("Tìm");
+    //
+    JTextArea taHanghoa = new JTextArea();
+    //
+    JTextField txtTim = new JTextField(10);
+
     /**
      * Creates new form FormNhapHang
      */
     public FormNhapHang() {
+        pnlMain.setLayout(new BorderLayout());
+        pnlTop.setLayout(new GridBagLayout());
+        pnlBottom.setLayout(new BorderLayout());
+        //
+        pnlTop.add(btnThem, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.WEST,
+                GridBagConstraints.NONE,
+                new Insets(10, 20, 0, 0), 0, 0));
+        //
+        pnlTop.add(btnSua, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.WEST,
+                GridBagConstraints.NONE,
+                new Insets(10, 20, 0, 0), 0, 0));
+        //
+        pnlTop.add(btnXoa, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.WEST,
+                GridBagConstraints.NONE,
+                new Insets(10, 20, 0, 0), 0, 0));
+        //
+        pnlTop.add(txtTim, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.WEST,
+                GridBagConstraints.NONE,
+                new Insets(10, 20, 0, 0), 0, 0));
+        //
+        pnlTop.add(btnTim, new GridBagConstraints(4, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.WEST,
+                GridBagConstraints.NONE,
+                new Insets(10, 20, 0, 0), 0, 0));
+        //
+        pnlMain.add(pnlTop, BorderLayout.NORTH);
+        pnlMain.add(pnlBottom, BorderLayout.SOUTH);
+        //
+        this.add(pnlMain);
+        //
         initComponents();
     }
 

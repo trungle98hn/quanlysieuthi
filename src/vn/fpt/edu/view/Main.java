@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 public class Main {
     public static void main(String[] args) {
           
-        FormDangNhap m = new FormDangNhap();
+        BaoCaoView m = new BaoCaoView();
         // Thuoc thuoc=new Thuoc();
 
         //Thuoc.setTitle("Quản lý cửa hàng thuốc");

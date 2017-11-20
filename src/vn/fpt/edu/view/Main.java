@@ -23,7 +23,7 @@ public class Main {
         // m.setLocationRelativeTo(null);
         // m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //thuoc.setVisible(true);
-        m.setTitle("Quản lý cửa hàng thuốc");
+        m.setTitle("Quản lý siêu thị mini");
         m.setSize(1050, 600);
         m.setResizable(false);
         m.setLocationRelativeTo(null);

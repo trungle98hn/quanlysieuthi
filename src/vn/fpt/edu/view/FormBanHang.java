@@ -66,6 +66,7 @@ public class FormBanHang extends javax.swing.JFrame {
                 "STT", "Mã HH", "Tên HH", "Số Lượng", "Nhà SX", "Trọng Lượng", "Đơn Vị", "Đơn Giá", "Thành Tiền"
             }
         ));
+        tbGioHang.setPreferredSize(new java.awt.Dimension(1050, 600));
         ScrGioHang.setViewportView(tbGioHang);
 
         btnThanhToan.setText("Thanh Toán");
@@ -87,9 +88,19 @@ public class FormBanHang extends javax.swing.JFrame {
         btnSua.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSua.setMaximumSize(new java.awt.Dimension(59, 23));
         btnSua.setMinimumSize(new java.awt.Dimension(59, 23));
+        btnSua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaActionPerformed(evt);
+            }
+        });
 
         btnXoa.setText("Xóa");
         btnXoa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnXoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlNutLayout = new javax.swing.GroupLayout(pnlNut);
         pnlNut.setLayout(pnlNutLayout);
@@ -152,8 +163,16 @@ public class FormBanHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btnThemActionPerformed
 
     private void btnThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThanhToanActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnThanhToanActionPerformed
+
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSuaActionPerformed
+
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnXoaActionPerformed
 
     /**
      * @param args the command line arguments

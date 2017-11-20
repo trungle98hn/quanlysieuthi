@@ -6,6 +6,7 @@
 package vn.fpt.edu.view;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,7 +30,6 @@ public class FormMuaHang extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         lblMaHangHoa = new javax.swing.JLabel();
         lblTenHangHoa = new javax.swing.JLabel();
@@ -41,163 +41,30 @@ public class FormMuaHang extends javax.swing.JFrame {
         txtMaHangHoa = new javax.swing.JTextField();
         txtTenHangHoa = new javax.swing.JTextField();
         txtSoLuong = new javax.swing.JTextField();
-        lbNSX = new javax.swing.JLabel();
-        lbTL = new javax.swing.JLabel();
-        lblDG = new javax.swing.JLabel();
         cbbDonVi = new javax.swing.JComboBox<>();
         btnThemMuaHang = new javax.swing.JButton();
         btnQuayLaiMH = new javax.swing.JButton();
+        btnNSX = new javax.swing.JTextField();
+        btnTL = new javax.swing.JTextField();
+        btnDonGia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         lblMaHangHoa.setText("Mã Hàng Hóa");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(54, 95, 0, 0);
-        getContentPane().add(lblMaHangHoa, gridBagConstraints);
 
         lblTenHangHoa.setText("Tên Hàng Hóa");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 95, 0, 0);
-        getContentPane().add(lblTenHangHoa, gridBagConstraints);
 
         lblSoLuong.setText("Số Lượng");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 95, 0, 0);
-        getContentPane().add(lblSoLuong, gridBagConstraints);
 
         lblNhaSX.setText("Nhà Sản Xuất");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 95, 0, 0);
-        getContentPane().add(lblNhaSX, gridBagConstraints);
 
         lblTrongLuong.setText("Trọng Lượng");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 95, 0, 0);
-        getContentPane().add(lblTrongLuong, gridBagConstraints);
 
         lblDonGia.setText("Đơn Giá");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 95, 0, 0);
-        getContentPane().add(lblDonGia, gridBagConstraints);
 
         lblDonVi.setText("Đơn Vị");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 95, 0, 0);
-        getContentPane().add(lblDonVi, gridBagConstraints);
 
-        txtMaHangHoa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMaHangHoaActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 10;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 114;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(51, 18, 0, 0);
-        getContentPane().add(txtMaHangHoa, gridBagConstraints);
-
-        txtTenHangHoa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTenHangHoaActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 10;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 114;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        getContentPane().add(txtTenHangHoa, gridBagConstraints);
-
-        txtSoLuong.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSoLuongActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 10;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 114;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        getContentPane().add(txtSoLuong, gridBagConstraints);
-
-        lbNSX.setText("NSX");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        getContentPane().add(lbNSX, gridBagConstraints);
-
-        lbTL.setText("Tl");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        getContentPane().add(lbTL, gridBagConstraints);
-
-        lblDG.setText("DG");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        getContentPane().add(lblDG, gridBagConstraints);
-
-        cbbDonVi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbbDonVi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbbDonViActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 9;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        getContentPane().add(cbbDonVi, gridBagConstraints);
+        cbbDonVi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kg", "Gam" }));
 
         btnThemMuaHang.setText("Thêm");
         btnThemMuaHang.addActionListener(new java.awt.event.ActionListener() {
@@ -205,14 +72,6 @@ public class FormMuaHang extends javax.swing.JFrame {
                 btnThemMuaHangActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 8;
-        gridBagConstraints.ipadx = 14;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 3, 27, 0);
-        getContentPane().add(btnThemMuaHang, gridBagConstraints);
 
         btnQuayLaiMH.setText("Quay lại");
         btnQuayLaiMH.addActionListener(new java.awt.event.ActionListener() {
@@ -220,36 +79,102 @@ public class FormMuaHang extends javax.swing.JFrame {
                 btnQuayLaiMHActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 16;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 11;
-        gridBagConstraints.ipadx = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 27, 153);
-        getContentPane().add(btnQuayLaiMH, gridBagConstraints);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(lblMaHangHoa)
+                        .addGap(22, 22, 22)
+                        .addComponent(txtMaHangHoa, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(lblTenHangHoa)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtTenHangHoa, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(lblDonVi)
+                        .addGap(55, 55, 55)
+                        .addComponent(cbbDonVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(btnThemMuaHang, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(btnQuayLaiMH, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSoLuong)
+                            .addComponent(lblNhaSX)
+                            .addComponent(lblTrongLuong)
+                            .addComponent(lblDonGia))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnTL, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(txtSoLuong, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnNSX, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnDonGia))))
+                .addGap(158, 158, 158))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(lblMaHangHoa))
+                    .addComponent(txtMaHangHoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(lblTenHangHoa))
+                    .addComponent(txtTenHangHoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(lblSoLuong))
+                    .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNhaSX)
+                    .addComponent(btnNSX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTrongLuong)
+                    .addComponent(btnTL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDonGia)
+                    .addComponent(btnDonGia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(lblDonVi))
+                    .addComponent(cbbDonVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnThemMuaHang)
+                    .addComponent(btnQuayLaiMH)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtTenHangHoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenHangHoaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTenHangHoaActionPerformed
-
-    private void cbbDonViActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbDonViActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbbDonViActionPerformed
-
-    private void txtMaHangHoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaHangHoaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMaHangHoaActionPerformed
-
-    private void txtSoLuongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSoLuongActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSoLuongActionPerformed
-
     private void btnThemMuaHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemMuaHangActionPerformed
-        // TODO add your handling code here:
+        FormBanHang frth = new FormBanHang();
+        frth.setVisible(true);
+        this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "đã thêm");
+    
     }//GEN-LAST:event_btnThemMuaHangActionPerformed
 
     private void btnQuayLaiMHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiMHActionPerformed
@@ -294,12 +219,12 @@ public class FormMuaHang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField btnDonGia;
+    private javax.swing.JTextField btnNSX;
     private javax.swing.JButton btnQuayLaiMH;
+    private javax.swing.JTextField btnTL;
     private javax.swing.JButton btnThemMuaHang;
     private javax.swing.JComboBox<String> cbbDonVi;
-    private javax.swing.JLabel lbNSX;
-    private javax.swing.JLabel lbTL;
-    private javax.swing.JLabel lblDG;
     private javax.swing.JLabel lblDonGia;
     private javax.swing.JLabel lblDonVi;
     private javax.swing.JLabel lblMaHangHoa;

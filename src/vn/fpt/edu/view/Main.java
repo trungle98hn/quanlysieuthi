@@ -15,14 +15,6 @@ public class Main {
     public static void main(String[] args) {
           
         FormBanHang m = new FormBanHang();
-        // Thuoc thuoc=new Thuoc();
-
-        //Thuoc.setTitle("Quản lý cửa hàng thuốc");
-        // thuoc.setSize(740, 420);
-        // m.setResizable(false);
-        // m.setLocationRelativeTo(null);
-        // m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //thuoc.setVisible(true);
         m.setTitle("Quản lý siêu thị mini");
         m.setSize(680, 420);
         m.setResizable(false);

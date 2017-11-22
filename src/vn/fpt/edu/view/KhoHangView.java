@@ -10,17 +10,30 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Enumeration;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.TableColumnModelListener;
+import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 import vn.fpt.edu.connect.Connect;
 
 /**
@@ -28,26 +41,28 @@ import vn.fpt.edu.connect.Connect;
  * @author Le Huy
  */
 public final class KhoHangView extends JFrame {
+
     //JPanel
     JPanel pnlMain = new JPanel();
     JPanel pnlTop = new JPanel();
     JPanel pnlCenter = new JPanel();
     JPanel pnlBottom = new JPanel();
-    
+
     //JButton
     JButton btnThem = new JButton("Thêm");
     JButton btnSua = new JButton("Sửa");
     JButton btnXoa = new JButton("Xóa");
     JButton btnTim = new JButton("Tìm");
-    
+
     //JTextField
     JTextField txtTim = new JTextField(10);
+
     public KhoHangView() {
         pnlMain.setLayout(new BorderLayout());
         pnlTop.setLayout(new GridBagLayout());
         pnlCenter.setLayout(new GridBagLayout());
         pnlBottom.setLayout(new BorderLayout());
-        
+
         pnlCenter.add(btnThem, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
                 GridBagConstraints.WEST,
                 GridBagConstraints.NONE,
@@ -68,7 +83,7 @@ public final class KhoHangView extends JFrame {
                 GridBagConstraints.WEST,
                 GridBagConstraints.NONE,
                 new Insets(10, 20, 0, 0), 0, 0));
-        
+
         JTable table = new JTable();
         DefaultTableModel dftb = new DefaultTableModel();
         Vector data = new Vector();
@@ -83,7 +98,7 @@ public final class KhoHangView extends JFrame {
         header.add("Hạn sử dụng");
         header.add("Giá tiền");
         header.add("Số lượng");
-        
+
         Connect kn = new Connect();
         Connection cn = kn.getConnect();
         table.setPreferredScrollableViewportSize(new Dimension(1000, 230));
@@ -117,15 +132,16 @@ public final class KhoHangView extends JFrame {
         }
         JScrollPane scrDanhsach = new JScrollPane(table);
         table.setModel(new DefaultTableModel(data, header));
-    
+        table.getColumnModel().getColumn(0).setPreferredWidth(2);
+        table.getColumnModel().getColumn(9).setPreferredWidth(2);
         pnlBottom.add(scrDanhsach, BorderLayout.CENTER);
-        
-        
+
         pnlMain.add(pnlTop, BorderLayout.NORTH);
         pnlMain.add(pnlCenter, BorderLayout.CENTER);
         pnlMain.add(pnlBottom, BorderLayout.SOUTH);
-        
+
         this.add(pnlMain);
+
+        
     }
-    
 }

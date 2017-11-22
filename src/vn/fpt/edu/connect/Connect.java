@@ -36,7 +36,7 @@ public class Connect extends JFrame{
        
     public Connection getConnect(){
         try {
-            String url="jdbc:sqlserver://localhost:1433;databaseName=QUANLISIEUTHI";
+            String url="jdbc:sqlserver://127.0.0.1:1433;databaseName=QUANLISIEUTHI";
             String user="sa";
             String pass="123";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

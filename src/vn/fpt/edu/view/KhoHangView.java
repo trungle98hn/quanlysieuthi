@@ -142,6 +142,65 @@ public final class KhoHangView extends JFrame {
 
         this.add(pnlMain);
 
+        btnXoa.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Connect cn = new Connect();
+                Connection cnn = cn.getConnect();
+                try {
+                    PreparedStatement ps = cnn.prepareStatement("Delete HANGHOA Where MAHANGHOA=?");
+                    ps.setString(1, table.getValueAt(table.getSelectedRow(), 1) + "");
+                    if (JOptionPane.showConfirmDialog(null, "ban co muon xoa ko?", "config", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                        ps.executeUpdate();
+
+                        table.setModel(new DefaultTableModel(data, header));
+                        Connection cn1 = kn.getConnect();
+                        table.setPreferredScrollableViewportSize(new Dimension(930, 230));
+                        Statement st = null;
+                        ResultSet rs = null;
+                        String sql = "Select * form HANGHOA";
+                        try {
+                            st = cn1.createStatement();
+                            rs = st.executeQuery(sql);
+                            int i = 1;
+                            while (rs.next()) {
+                                Vector data1 = new Vector();
+
+                                data1.add(i);
+                                data1.add(rs.getString(1));
+                                data1.add(rs.getString(3));
+                                data1.add(rs.getString(3));
+                                data1.add(rs.getString(4));
+                                data1.add(rs.getString(5));
+                                data1.add(rs.getString(6));
+                                data1.add(rs.getString(7));
+                                data.add(rs.getString(8));
+                                data.add(rs.getString(9));
+                                data.add(data1);
+
+                                table.setModel(new DefaultTableModel(data, header));
+                                i++;
+                                ps.close();
+                            }
+
+                        } catch (SQLException ex) {
+                        }
+
+                    }
+                } catch (SQLException ex) {
+                }
+
+            }
+        });
         
+        btnThem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ThemHangView t = new ThemHangView();
+                t.setVisible(true);
+                t.setSize(1000, 350);
+                t.setLocationRelativeTo(null);
+            }
+        });
     }
 }

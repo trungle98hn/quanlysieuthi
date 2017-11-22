@@ -10,6 +10,8 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -86,7 +88,7 @@ public final class ThemHangView extends JFrame{
         table.setPreferredScrollableViewportSize(new Dimension(1000, 230));
         Statement st = null;
         ResultSet rs = null;
-        String sql = "Select * FROM HANGHOA";
+        String sql = "";
         try {
             st = cn.createStatement();
             rs = st.executeQuery(sql);
@@ -121,5 +123,16 @@ public final class ThemHangView extends JFrame{
         pnlMain.add(pnlBottom, BorderLayout.SOUTH);
         
         this.add(pnlMain);
+    
+        btnThem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ThemHang t = new ThemHang();
+                t.setVisible(true);
+                t.setSize(300, 400);
+                t.setLocationRelativeTo(null);
+            }
+        });
+        
     }
 }
